@@ -3,11 +3,11 @@
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>THIS</title>
 </head>
 <body>
     <div th:each="person : ${people}">
-        <a href="" th:text="${person.getName()}"></a>
+        <h1><a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a></h1>
     </div>
 </body>
 </html>
